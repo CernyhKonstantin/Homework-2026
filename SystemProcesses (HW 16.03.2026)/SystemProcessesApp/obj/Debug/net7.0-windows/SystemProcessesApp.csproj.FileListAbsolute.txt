@@ -1,0 +1,28 @@
+C:\Users\konst\Desktop\SystemProcesses\SystemProcessesApp\bin\Debug\net7.0-windows\SystemProcessesApp.exe
+C:\Users\konst\Desktop\SystemProcesses\SystemProcessesApp\bin\Debug\net7.0-windows\SystemProcessesApp.deps.json
+C:\Users\konst\Desktop\SystemProcesses\SystemProcessesApp\bin\Debug\net7.0-windows\SystemProcessesApp.runtimeconfig.json
+C:\Users\konst\Desktop\SystemProcesses\SystemProcessesApp\bin\Debug\net7.0-windows\SystemProcessesApp.dll
+C:\Users\konst\Desktop\SystemProcesses\SystemProcessesApp\bin\Debug\net7.0-windows\SystemProcessesApp.pdb
+C:\Users\konst\Desktop\SystemProcesses\SystemProcessesApp\obj\Debug\net7.0-windows\SystemProcessesApp.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\konst\Desktop\SystemProcesses\SystemProcessesApp\obj\Debug\net7.0-windows\SystemProcessesApp.AssemblyInfoInputs.cache
+C:\Users\konst\Desktop\SystemProcesses\SystemProcessesApp\obj\Debug\net7.0-windows\SystemProcessesApp.AssemblyInfo.cs
+C:\Users\konst\Desktop\SystemProcesses\SystemProcessesApp\obj\Debug\net7.0-windows\SystemProcessesApp.csproj.CoreCompileInputs.cache
+C:\Users\konst\Desktop\SystemProcesses\SystemProcessesApp\obj\Debug\net7.0-windows\SystemProcessesApp.dll
+C:\Users\konst\Desktop\SystemProcesses\SystemProcessesApp\obj\Debug\net7.0-windows\refint\SystemProcessesApp.dll
+C:\Users\konst\Desktop\SystemProcesses\SystemProcessesApp\obj\Debug\net7.0-windows\SystemProcessesApp.pdb
+C:\Users\konst\Desktop\SystemProcesses\SystemProcessesApp\obj\Debug\net7.0-windows\SystemProcessesApp.genruntimeconfig.cache
+C:\Users\konst\Desktop\SystemProcesses\SystemProcessesApp\obj\Debug\net7.0-windows\ref\SystemProcessesApp.dll
+C:\Users\konst\Desktop\SystemProcesses (HW 16.03.2026)\SystemProcessesApp\bin\Debug\net7.0-windows\SystemProcessesApp.exe
+C:\Users\konst\Desktop\SystemProcesses (HW 16.03.2026)\SystemProcessesApp\bin\Debug\net7.0-windows\SystemProcessesApp.deps.json
+C:\Users\konst\Desktop\SystemProcesses (HW 16.03.2026)\SystemProcessesApp\bin\Debug\net7.0-windows\SystemProcessesApp.runtimeconfig.json
+C:\Users\konst\Desktop\SystemProcesses (HW 16.03.2026)\SystemProcessesApp\bin\Debug\net7.0-windows\SystemProcessesApp.dll
+C:\Users\konst\Desktop\SystemProcesses (HW 16.03.2026)\SystemProcessesApp\bin\Debug\net7.0-windows\SystemProcessesApp.pdb
+C:\Users\konst\Desktop\SystemProcesses (HW 16.03.2026)\SystemProcessesApp\obj\Debug\net7.0-windows\SystemProcessesApp.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\konst\Desktop\SystemProcesses (HW 16.03.2026)\SystemProcessesApp\obj\Debug\net7.0-windows\SystemProcessesApp.AssemblyInfoInputs.cache
+C:\Users\konst\Desktop\SystemProcesses (HW 16.03.2026)\SystemProcessesApp\obj\Debug\net7.0-windows\SystemProcessesApp.AssemblyInfo.cs
+C:\Users\konst\Desktop\SystemProcesses (HW 16.03.2026)\SystemProcessesApp\obj\Debug\net7.0-windows\SystemProcessesApp.csproj.CoreCompileInputs.cache
+C:\Users\konst\Desktop\SystemProcesses (HW 16.03.2026)\SystemProcessesApp\obj\Debug\net7.0-windows\SystemProcessesApp.dll
+C:\Users\konst\Desktop\SystemProcesses (HW 16.03.2026)\SystemProcessesApp\obj\Debug\net7.0-windows\refint\SystemProcessesApp.dll
+C:\Users\konst\Desktop\SystemProcesses (HW 16.03.2026)\SystemProcessesApp\obj\Debug\net7.0-windows\SystemProcessesApp.pdb
+C:\Users\konst\Desktop\SystemProcesses (HW 16.03.2026)\SystemProcessesApp\obj\Debug\net7.0-windows\SystemProcessesApp.genruntimeconfig.cache
+C:\Users\konst\Desktop\SystemProcesses (HW 16.03.2026)\SystemProcessesApp\obj\Debug\net7.0-windows\ref\SystemProcessesApp.dll
