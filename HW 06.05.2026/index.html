@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Tasks</title>
+</head>
+<body>
+
+<h2>JavaScript Practice Tasks</h2>
+
+<button onclick="runTasks()">Start Tasks</button>
+
+<script>
+function runTasks() {
+
+    // Task 1: User age
+    let age = Number(prompt("Enter your age:"));
+    alert("You are " + age + " years old.");
+
+    // Task 2: Calculate perimeter of a square
+    let side = Number(prompt("Enter the side length of the square:"));
+    let perimeter = side * 4;
+    alert("Square perimeter: " + perimeter);
+
+    // Task 3: Calculate circle area
+    let radius = Number(prompt("Enter the radius of the circle:"));
+    let circleArea = 3.14 * radius * radius;
+    alert("Circle area: " + circleArea);
+
+    // Task 4: Convert dollars to euros
+    let dollars = Number(prompt("Enter amount in dollars:"));
+    let euros = dollars * 0.92;
+    alert("Amount in euros: " + euros);
+
+    // Task 5: Check positive or negative
+    let number = Number(prompt("Enter a number:"));
+
+    if (number > 0) {
+        alert("Positive number");
+    } else if (number < 0) {
+        alert("Negative number");
+    } else {
+        alert("Zero");
+    }
+}
+</script>
+
+</body>
+</html>
