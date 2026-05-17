@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hide Show and Tabs</title>
+
+    <style>
+
+        body {
+            font-family: Arial;
+            padding: 20px;
+        }
+
+        /* Task 3 */
+
+        .text-box {
+            width: 700px;
+            background-color: #f4ece4;
+            padding: 20px;
+            margin-top: 20px;
+        }
+
+        button {
+            padding: 10px 20px;
+            font-size: 20px;
+            cursor: pointer;
+        }
+
+        #text {
+            margin-top: 20px;
+            font-size: 22px;
+            line-height: 1.5;
+        }
+
+        .hidden {
+            display: none;
+        }
+
+
+        /* Task 4 */
+
+        .tabs-container {
+            display: flex;
+            width: 900px;
+            margin-top: 50px;
+            border: 3px solid #5b7ea4;
+        }
+
+        .tabs {
+            width: 150px;
+            background-color: #5b7ea4;
+        }
+
+        .tab-button {
+            width: 100%;
+            border: none;
+            background-color: #5b7ea4;
+            color: white;
+            padding: 20px;
+            text-align: left;
+            font-size: 24px;
+        }
+
+        .tab-button:hover {
+            background-color: #48698c;
+        }
+
+        .tab-content {
+            flex: 1;
+            padding: 20px;
+            font-size: 24px;
+            background-color: #f4ece4;
+            display: none;
+        }
+
+        .active {
+            display: block;
+        }
+
+    </style>
+</head>
+<body>
+
+    <h2>Task 3</h2>
+
+    <div class="text-box">
+
+        <button id="toggleButton">
+            Hide / Show Text
+        </button>
+
+        <div id="text">
+
+            Lorem Ipsum is simply dummy text of the
+            printing and typesetting industry.
+            Lorem Ipsum has been the industry's
+            standard dummy text ever since the 1500s.
+
+        </div>
+
+    </div>
+
+
+    <h2>Task 4</h2>
+
+    <div class="tabs-container">
+
+        <div class="tabs">
+
+            <button class="tab-button" data-tab="html">
+                HTML
+            </button>
+
+            <button class="tab-button" data-tab="css">
+                CSS
+            </button>
+
+            <button class="tab-button" data-tab="js">
+                JS
+            </button>
+
+        </div>
+
+
+        <div class="tab-content active" id="html">
+
+            HTML is the standard markup language
+            for creating web pages.
+
+        </div>
+
+        <div class="tab-content" id="css">
+
+            CSS is used for styling web pages
+            and layouts.
+
+        </div>
+
+        <div class="tab-content" id="js">
+
+            JavaScript adds interactivity
+            to web pages.
+
+        </div>
+
+    </div>
+
+    <script src="lesson.js"></script>
+
+</body>
+</html>
