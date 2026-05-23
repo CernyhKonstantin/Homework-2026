@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>Registration Form</title>
+
+    <link rel="stylesheet"
+          href="style.css">
+
+</head>
+<body>
+
+    <div class="container">
+
+        <h1>Registration Form</h1>
+
+        <form id="registerForm">
+
+            <input type="text"
+                   id="firstName"
+                   placeholder="First Name">
+
+
+            <input type="text"
+                   id="lastName"
+                   placeholder="Last Name">
+
+
+            <input type="email"
+                   id="email"
+                   placeholder="Email">
+
+
+            <input type="password"
+                   id="password"
+                   placeholder="Password">
+
+
+            <input type="date"
+                   id="birthDate">
+
+
+            <input type="text"
+                   id="phone"
+                   placeholder="+380123456789">
+
+
+            <select id="country">
+
+                <option>Germany</option>
+
+                <option>Ukraine</option>
+
+                <option>Poland</option>
+
+                <option>France</option>
+
+            </select>
+
+
+            <div class="radio-group">
+
+                <label>
+                    <input type="radio"
+                           name="gender"
+                           value="Male">
+                    Male
+                </label>
+
+                <label>
+                    <input type="radio"
+                           name="gender"
+                           value="Female">
+                    Female
+                </label>
+
+            </div>
+
+
+            <div class="checkbox-group">
+
+                <label>
+                    <input type="checkbox"
+                           value="HTML">
+                    HTML
+                </label>
+
+                <label>
+                    <input type="checkbox"
+                           value="CSS">
+                    CSS
+                </label>
+
+                <label>
+                    <input type="checkbox"
+                           value="JavaScript">
+                    JavaScript
+                </label>
+
+                <label>
+                    <input type="checkbox"
+                           value="React">
+                    React
+                </label>
+
+            </div>
+
+
+            <textarea id="comment"
+                      placeholder="Comment"></textarea>
+
+
+            <label class="agree">
+
+                <input type="checkbox"
+                       id="agree">
+
+                I agree
+
+            </label>
+
+
+            <button type="submit">
+
+                Register
+
+            </button>
+
+        </form>
+
+
+        <p id="result"></p>
+
+    </div>
+
+    <script src="lesson.js"></script>
+
+</body>
+</html>
