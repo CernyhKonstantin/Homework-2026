@@ -1,0 +1,24 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: #f5f6fa;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+button {
+    cursor: pointer;
+}
+
+img {
+    display: block;
+    margin: auto;
+}
+
+input,
+select {
+    outline: none;
+}
