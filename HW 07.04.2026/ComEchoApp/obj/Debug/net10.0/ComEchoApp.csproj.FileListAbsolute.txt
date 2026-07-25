@@ -1,0 +1,14 @@
+C:\Users\konst\Desktop\HW 07.04.2026\ComEchoApp\bin\Debug\net10.0\ComEchoApp.exe
+C:\Users\konst\Desktop\HW 07.04.2026\ComEchoApp\bin\Debug\net10.0\ComEchoApp.deps.json
+C:\Users\konst\Desktop\HW 07.04.2026\ComEchoApp\bin\Debug\net10.0\ComEchoApp.runtimeconfig.json
+C:\Users\konst\Desktop\HW 07.04.2026\ComEchoApp\bin\Debug\net10.0\ComEchoApp.dll
+C:\Users\konst\Desktop\HW 07.04.2026\ComEchoApp\bin\Debug\net10.0\ComEchoApp.pdb
+C:\Users\konst\Desktop\HW 07.04.2026\ComEchoApp\obj\Debug\net10.0\ComEchoApp.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\konst\Desktop\HW 07.04.2026\ComEchoApp\obj\Debug\net10.0\ComEchoApp.AssemblyInfoInputs.cache
+C:\Users\konst\Desktop\HW 07.04.2026\ComEchoApp\obj\Debug\net10.0\ComEchoApp.AssemblyInfo.cs
+C:\Users\konst\Desktop\HW 07.04.2026\ComEchoApp\obj\Debug\net10.0\ComEchoApp.csproj.CoreCompileInputs.cache
+C:\Users\konst\Desktop\HW 07.04.2026\ComEchoApp\obj\Debug\net10.0\ComEchoApp.dll
+C:\Users\konst\Desktop\HW 07.04.2026\ComEchoApp\obj\Debug\net10.0\refint\ComEchoApp.dll
+C:\Users\konst\Desktop\HW 07.04.2026\ComEchoApp\obj\Debug\net10.0\ComEchoApp.pdb
+C:\Users\konst\Desktop\HW 07.04.2026\ComEchoApp\obj\Debug\net10.0\ComEchoApp.genruntimeconfig.cache
+C:\Users\konst\Desktop\HW 07.04.2026\ComEchoApp\obj\Debug\net10.0\ref\ComEchoApp.dll

@@ -1,0 +1,17 @@
+.container {
+    font-family: Arial;
+    text-align: center;
+}
+
+.card {
+    border: 1px solid black;
+    margin: 20px auto;
+    padding: 15px;
+    width: 400px;
+    border-radius: 10px;
+}
+
+img {
+    margin: 10px;
+    border-radius: 10px;
+}
