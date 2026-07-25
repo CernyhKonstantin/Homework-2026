@@ -1,0 +1,35 @@
+C:\Users\konst\Desktop\HW 22.06.2026\HW 22.06.2026\obj\Debug\net8.0\rpswa.dswa.cache.json
+C:\Users\konst\Desktop\HW 22.06.2026\HW 22.06.2026\obj\Debug\net8.0\HW 22.06.2026.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\konst\Desktop\HW 22.06.2026\HW 22.06.2026\obj\Debug\net8.0\HW 22.06.2026.AssemblyInfoInputs.cache
+C:\Users\konst\Desktop\HW 22.06.2026\HW 22.06.2026\obj\Debug\net8.0\HW 22.06.2026.AssemblyInfo.cs
+C:\Users\konst\Desktop\HW 22.06.2026\HW 22.06.2026\obj\Debug\net8.0\HW 22.06.2026.csproj.CoreCompileInputs.cache
+C:\Users\konst\Desktop\HW 22.06.2026\HW 22.06.2026\obj\Debug\net8.0\HW 22.06.2026.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\konst\Desktop\HW 22.06.2026\HW 22.06.2026\bin\Debug\net8.0\appsettings.Development.json
+C:\Users\konst\Desktop\HW 22.06.2026\HW 22.06.2026\bin\Debug\net8.0\appsettings.json
+C:\Users\konst\Desktop\HW 22.06.2026\HW 22.06.2026\bin\Debug\net8.0\HW 22.06.2026.staticwebassets.endpoints.json
+C:\Users\konst\Desktop\HW 22.06.2026\HW 22.06.2026\bin\Debug\net8.0\HW 22.06.2026.exe
+C:\Users\konst\Desktop\HW 22.06.2026\HW 22.06.2026\bin\Debug\net8.0\HW 22.06.2026.deps.json
+C:\Users\konst\Desktop\HW 22.06.2026\HW 22.06.2026\bin\Debug\net8.0\HW 22.06.2026.runtimeconfig.json
+C:\Users\konst\Desktop\HW 22.06.2026\HW 22.06.2026\bin\Debug\net8.0\HW 22.06.2026.dll
+C:\Users\konst\Desktop\HW 22.06.2026\HW 22.06.2026\bin\Debug\net8.0\HW 22.06.2026.pdb
+C:\Users\konst\Desktop\HW 22.06.2026\HW 22.06.2026\bin\Debug\net8.0\Microsoft.OpenApi.dll
+C:\Users\konst\Desktop\HW 22.06.2026\HW 22.06.2026\bin\Debug\net8.0\Swashbuckle.AspNetCore.Swagger.dll
+C:\Users\konst\Desktop\HW 22.06.2026\HW 22.06.2026\bin\Debug\net8.0\Swashbuckle.AspNetCore.SwaggerGen.dll
+C:\Users\konst\Desktop\HW 22.06.2026\HW 22.06.2026\bin\Debug\net8.0\Swashbuckle.AspNetCore.SwaggerUI.dll
+C:\Users\konst\Desktop\HW 22.06.2026\HW 22.06.2026\obj\Debug\net8.0\HW 22.06.2026.csproj.AssemblyReference.cache
+C:\Users\konst\Desktop\HW 22.06.2026\HW 22.06.2026\obj\Debug\net8.0\HW 22.06.2026.MvcApplicationPartsAssemblyInfo.cs
+C:\Users\konst\Desktop\HW 22.06.2026\HW 22.06.2026\obj\Debug\net8.0\rjimswa.dswa.cache.json
+C:\Users\konst\Desktop\HW 22.06.2026\HW 22.06.2026\obj\Debug\net8.0\rjsmrazor.dswa.cache.json
+C:\Users\konst\Desktop\HW 22.06.2026\HW 22.06.2026\obj\Debug\net8.0\rjsmcshtml.dswa.cache.json
+C:\Users\konst\Desktop\HW 22.06.2026\HW 22.06.2026\obj\Debug\net8.0\scopedcss\bundle\HW 22.06.2026.styles.css
+C:\Users\konst\Desktop\HW 22.06.2026\HW 22.06.2026\obj\Debug\net8.0\staticwebassets.build.json
+C:\Users\konst\Desktop\HW 22.06.2026\HW 22.06.2026\obj\Debug\net8.0\staticwebassets.build.json.cache
+C:\Users\konst\Desktop\HW 22.06.2026\HW 22.06.2026\obj\Debug\net8.0\staticwebassets.development.json
+C:\Users\konst\Desktop\HW 22.06.2026\HW 22.06.2026\obj\Debug\net8.0\staticwebassets.build.endpoints.json
+C:\Users\konst\Desktop\HW 22.06.2026\HW 22.06.2026\obj\Debug\net8.0\staticwebassets.upToDateCheck.txt
+C:\Users\konst\Desktop\HW 22.06.2026\HW 22.06.2026\obj\Debug\net8.0\HW 22.06.BD42D88E.Up2Date
+C:\Users\konst\Desktop\HW 22.06.2026\HW 22.06.2026\obj\Debug\net8.0\HW 22.06.2026.dll
+C:\Users\konst\Desktop\HW 22.06.2026\HW 22.06.2026\obj\Debug\net8.0\refint\HW 22.06.2026.dll
+C:\Users\konst\Desktop\HW 22.06.2026\HW 22.06.2026\obj\Debug\net8.0\HW 22.06.2026.pdb
+C:\Users\konst\Desktop\HW 22.06.2026\HW 22.06.2026\obj\Debug\net8.0\HW 22.06.2026.genruntimeconfig.cache
+C:\Users\konst\Desktop\HW 22.06.2026\HW 22.06.2026\obj\Debug\net8.0\ref\HW 22.06.2026.dll

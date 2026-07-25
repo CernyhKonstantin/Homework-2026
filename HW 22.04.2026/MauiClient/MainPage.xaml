@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             x:Class="MauiClient.MainPage">
+    <VerticalStackLayout Padding="20">
+        <Entry x:Name="NameEntry" Placeholder="Name"/>
+        <Button Text="Join" Clicked="Join_Clicked"/>
+        <Button Text="Start Game" Clicked="Game_Clicked"/>
+        <Entry x:Name="GuessEntry" Placeholder="Guess"/>
+        <Button Text="Send Guess" Clicked="Guess_Clicked"/>
+        <Label x:Name="Output"/>
+    </VerticalStackLayout>
+</ContentPage>

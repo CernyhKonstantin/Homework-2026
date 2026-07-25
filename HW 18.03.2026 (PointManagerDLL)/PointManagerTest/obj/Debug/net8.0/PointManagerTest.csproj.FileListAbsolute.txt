@@ -1,0 +1,14 @@
+C:\Users\konst\Desktop\PointManagerDLL\PointManagerTest\bin\Debug\net8.0\PointManagerTest.exe
+C:\Users\konst\Desktop\PointManagerDLL\PointManagerTest\bin\Debug\net8.0\PointManagerTest.deps.json
+C:\Users\konst\Desktop\PointManagerDLL\PointManagerTest\bin\Debug\net8.0\PointManagerTest.runtimeconfig.json
+C:\Users\konst\Desktop\PointManagerDLL\PointManagerTest\bin\Debug\net8.0\PointManagerTest.dll
+C:\Users\konst\Desktop\PointManagerDLL\PointManagerTest\bin\Debug\net8.0\PointManagerTest.pdb
+C:\Users\konst\Desktop\PointManagerDLL\PointManagerTest\obj\Debug\net8.0\PointManagerTest.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\konst\Desktop\PointManagerDLL\PointManagerTest\obj\Debug\net8.0\PointManagerTest.AssemblyInfoInputs.cache
+C:\Users\konst\Desktop\PointManagerDLL\PointManagerTest\obj\Debug\net8.0\PointManagerTest.AssemblyInfo.cs
+C:\Users\konst\Desktop\PointManagerDLL\PointManagerTest\obj\Debug\net8.0\PointManagerTest.csproj.CoreCompileInputs.cache
+C:\Users\konst\Desktop\PointManagerDLL\PointManagerTest\obj\Debug\net8.0\PointManagerTest.dll
+C:\Users\konst\Desktop\PointManagerDLL\PointManagerTest\obj\Debug\net8.0\refint\PointManagerTest.dll
+C:\Users\konst\Desktop\PointManagerDLL\PointManagerTest\obj\Debug\net8.0\PointManagerTest.pdb
+C:\Users\konst\Desktop\PointManagerDLL\PointManagerTest\obj\Debug\net8.0\PointManagerTest.genruntimeconfig.cache
+C:\Users\konst\Desktop\PointManagerDLL\PointManagerTest\obj\Debug\net8.0\ref\PointManagerTest.dll

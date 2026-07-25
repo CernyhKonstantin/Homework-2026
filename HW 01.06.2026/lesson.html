@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>Movie Search</title>
+
+    <link rel="stylesheet"
+          href="style.css">
+
+</head>
+<body>
+
+    <h1 class="main-title">
+        Search:
+    </h1>
+
+    <div class="search-box">
+
+        <div class="row">
+
+            <label>
+                Title:
+            </label>
+
+            <input
+                type="text"
+                id="movieInput">
+
+        </div>
+
+        <div class="row">
+
+            <label>
+                Type:
+            </label>
+
+            <select id="typeSelect">
+
+                <option value="movie">
+                    Movie
+                </option>
+
+                <option value="series">
+                    Series
+                </option>
+
+                <option value="episode">
+                    Episode
+                </option>
+
+            </select>
+
+        </div>
+
+        <button id="searchButton">
+
+            Search
+
+        </button>
+
+    </div>
+
+    <h2 class="section-title">
+
+        Films:
+
+    </h2>
+
+    <div id="moviesContainer"
+         class="movies-container">
+
+    </div>
+
+    <div id="pagination"
+         class="pagination">
+
+    </div>
+
+    <h2 class="section-title">
+
+        Film info:
+
+    </h2>
+
+    <div id="detailsContainer">
+
+    </div>
+
+    <script src="lesson.js"></script>
+
+</body>
+</html>
