@@ -1,0 +1,47 @@
+services:
+  redis:
+    image: redis:7-alpine
+    container_name: hw14082026-redis
+    restart: unless-stopped
+    ports:
+      - "6379:6379"
+    volumes:
+      - redis_data:/data
+    command: redis-server --appendonly yes
+    healthcheck:
+      test: ["CMD", "redis-cli", "ping"]
+      interval: 5s
+      timeout: 3s
+      retries: 10
+
+  api:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: hw14082026-api
+    restart: unless-stopped
+    depends_on:
+      redis:
+        condition: service_healthy
+    ports:
+      - "8080:8080"
+    environment:
+      ASPNETCORE_ENVIRONMENT: Development
+      ConnectionStrings__Redis: redis:6379
+      Redis__ConnectionString: redis:6379
+      Redis__InstanceName: HW14082026:
+      Redis__ProductCacheMinutes: 10
+      # Replace these example values with your real SQL Server and SMTP settings.
+      ConnectionStrings__DefaultConnection: "Server=host.docker.internal;Database=store_hw_14_08_2026;User Id=sa;Password=YourStrongPassword123!;TrustServerCertificate=True;"
+      Email__Host: "smtp.example.com"
+      Email__Port: "587"
+      Email__Username: "your-email@example.com"
+      Email__Password: "your-email-password"
+      Email__FromEmail: "your-email@example.com"
+      Email__FromName: "HW 10 Shop"
+      Email__UseSsl: "true"
+      AdminSeed__Email: "admin@example.com"
+      AdminSeed__Password: "ChangeMe123!"
+
+volumes:
+  redis_data:
