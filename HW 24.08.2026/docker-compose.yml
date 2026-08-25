@@ -1,0 +1,75 @@
+services:
+  rabbitmq:
+    image: rabbitmq:3-management
+    container_name: hw24082026-rabbitmq
+    restart: unless-stopped
+    ports:
+      - "5672:5672"
+      - "15672:15672"
+    environment:
+      RABBITMQ_DEFAULT_USER: guest
+      RABBITMQ_DEFAULT_PASS: guest
+    volumes:
+      - rabbitmq_data:/var/lib/rabbitmq
+    healthcheck:
+      test: ["CMD", "rabbitmq-diagnostics", "-q", "ping"]
+      interval: 10s
+      timeout: 5s
+      retries: 10
+
+  redis:
+    image: redis:7-alpine
+    container_name: hw24082026-redis
+    restart: unless-stopped
+    ports:
+      - "6379:6379"
+    volumes:
+      - redis_data:/data
+    command: redis-server --appendonly yes
+    healthcheck:
+      test: ["CMD", "redis-cli", "ping"]
+      interval: 5s
+      timeout: 3s
+      retries: 10
+
+  api:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: hw24082026-api
+    restart: unless-stopped
+    depends_on:
+      redis:
+        condition: service_healthy
+      rabbitmq:
+        condition: service_healthy
+    ports:
+      - "8080:8080"
+    environment:
+      ASPNETCORE_ENVIRONMENT: Development
+      ConnectionStrings__Redis: redis:6379
+      Redis__ConnectionString: redis:6379
+      Redis__InstanceName: HW24082026:
+      Redis__ProductCacheMinutes: 10
+      RabbitMQ__HostName: rabbitmq
+      RabbitMQ__Port: 5672
+      RabbitMQ__UserName: guest
+      RabbitMQ__Password: guest
+      RabbitMQ__VirtualHost: /
+      RabbitMQ__UserQueue: Users
+      RabbitMQ__OrdersQueue: Orders
+      # Replace these example values with your real SQL Server and SMTP settings.
+      ConnectionStrings__DefaultConnection: "Server=host.docker.internal;Database=store_hw_24_08_2026;User Id=sa;Password=YourStrongPassword123!;TrustServerCertificate=True;"
+      Email__Host: "smtp.example.com"
+      Email__Port: "587"
+      Email__Username: "your-email@example.com"
+      Email__Password: "your-email-password"
+      Email__FromEmail: "your-email@example.com"
+      Email__FromName: "HW 24 Shop"
+      Email__UseSsl: "true"
+      AdminSeed__Email: "admin@example.com"
+      AdminSeed__Password: "ChangeMe123!"
+
+volumes:
+  redis_data:
+  rabbitmq_data:

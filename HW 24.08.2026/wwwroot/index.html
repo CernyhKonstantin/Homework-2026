@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HW 24.08.2026 - Authentication</title>
+    <link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+<header class="site-header">
+    <div class="brand">HW 24.08.2026</div>
+    <div class="header-user">
+        <span id="welcomeMessage">Welcome, guest</span>
+        <button id="logoutButton" class="secondary hidden" type="button">Logout</button>
+    </div>
+</header>
+
+<main class="container">
+    <section id="dashboard" class="card hidden">
+        <h1 id="dashboardTitle">Welcome</h1>
+        <p id="dashboardEmail"></p>
+        <p id="dashboardRole"></p>
+        <button id="refreshButton" class="secondary" type="button">Refresh access token</button>
+        <p id="refreshStatus" class="status"></p>
+    </section>
+
+    <section id="authForms" class="forms-grid">
+        <div class="card">
+            <h2>Register</h2>
+            <form id="registerForm">
+                <label for="registerEmail">Email</label>
+                <input id="registerEmail" type="email" autocomplete="email" required>
+
+                <label for="registerPassword">Password</label>
+                <input id="registerPassword" type="password" autocomplete="new-password" minlength="8" required>
+
+                <label for="registerRepeatPassword">Repeat password</label>
+                <input id="registerRepeatPassword" type="password" autocomplete="new-password" minlength="8" required>
+
+                <button type="submit">Create account</button>
+                <p id="registerStatus" class="status"></p>
+            </form>
+        </div>
+
+        <div class="card">
+            <h2>Login</h2>
+            <form id="loginForm">
+                <label for="loginEmail">Email</label>
+                <input id="loginEmail" type="email" autocomplete="email" required>
+
+                <label for="loginPassword">Password</label>
+                <input id="loginPassword" type="password" autocomplete="current-password" required>
+
+                <button type="submit">Login</button>
+                <p id="loginStatus" class="status"></p>
+            </form>
+        </div>
+    </section>
+</main>
+
+<script src="/app.js"></script>
+</body>
+</html>
