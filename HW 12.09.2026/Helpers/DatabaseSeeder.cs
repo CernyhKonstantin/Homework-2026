@@ -1,0 +1,61 @@
+using HW_12._09._2026.Data;
+using HW_12._09._2026.Models;
+using Microsoft.EntityFrameworkCore;
+
+namespace HW_12._09._2026.Helpers;
+
+public static class DatabaseSeeder
+{
+    public static async Task SeedAdminAsync(WebApplication app)
+    {
+        using var scope = app.Services.CreateScope();
+        var context = scope.ServiceProvider.GetRequiredService<ShopDbContext>();
+        var configuration = scope.ServiceProvider.GetRequiredService<IConfiguration>();
+
+        await context.Database.MigrateAsync();
+
+        await SeedExternalProvidersAsync(context);
+
+        if (!configuration.GetValue<bool>("AdminSeed:Enabled", true))
+            return;
+
+        var adminEmail = configuration["AdminSeed:Email"];
+        var adminPassword = configuration["AdminSeed:Password"];
+
+        if (string.IsNullOrWhiteSpace(adminEmail) ||
+            string.IsNullOrWhiteSpace(adminPassword))
+            return;
+
+        var existingAdmin = await context.Users
+            .AnyAsync(x => x.Role == "Admin");
+
+        if (existingAdmin)
+            return;
+
+        var admin = new User
+        {
+            Email = adminEmail.Trim().ToLowerInvariant(),
+            Password = BCrypt.Net.BCrypt.HashPassword(adminPassword),
+            Role = "Admin",
+            CreatedAt = DateTime.UtcNow
+        };
+
+        context.Users.Add(admin);
+        await context.SaveChangesAsync();
+    }
+    private static async Task SeedExternalProvidersAsync(ShopDbContext context)
+    {
+        var providerNames = new[] { "google", "fb", "apple" };
+
+        foreach (var providerName in providerNames)
+        {
+            if (!await context.Providers.AnyAsync(x => x.Name == providerName))
+            {
+                context.Providers.Add(new Provider { Name = providerName });
+            }
+        }
+
+        await context.SaveChangesAsync();
+    }
+
+}
