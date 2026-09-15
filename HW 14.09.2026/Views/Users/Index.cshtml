@@ -1,0 +1,44 @@
+@model IReadOnlyList<UserListItemViewModel>
+@{
+    ViewData["Title"] = "Users";
+}
+
+<div class="page-heading">
+    <div>
+        <span class="eyebrow">MVC View</span>
+        <h1>Users</h1>
+        <p>All users loaded through <code>IAdminService</code>.</p>
+    </div>
+    <span class="count-badge">@Model.Count users</span>
+</div>
+
+@if (Model.Count == 0)
+{
+    <div class="empty-state">No users were found.</div>
+}
+else
+{
+    <div class="table-card">
+        <table>
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Email</th>
+                    <th>Role</th>
+                    <th>Created</th>
+                </tr>
+            </thead>
+            <tbody>
+            @foreach (var user in Model)
+            {
+                <tr>
+                    <td>@user.Id</td>
+                    <td><strong>@user.Email</strong></td>
+                    <td><span class="role">@user.Role</span></td>
+                    <td>@user.CreatedAt.ToLocalTime().ToString("yyyy-MM-dd HH:mm")</td>
+                </tr>
+            }
+            </tbody>
+        </table>
+    </div>
+}

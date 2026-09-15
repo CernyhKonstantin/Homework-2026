@@ -1,0 +1,46 @@
+@model CategoriesPageViewModel
+@{
+    ViewData["Title"] = "Categories";
+}
+
+<div class="page-heading">
+    <div>
+        <span class="eyebrow">MVC View</span>
+        <h1>Categories</h1>
+        <p>All categories loaded through <code>ICategoryService</code>.</p>
+    </div>
+    <span class="count-badge">@Model.Categories.Count categories</span>
+</div>
+
+@if (Model.Categories.Count == 0)
+{
+    <div class="empty-state">No categories were found.</div>
+}
+else
+{
+    <div class="table-card">
+        <table>
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Name</th>
+                    <th>Slug</th>
+                    <th>Parent</th>
+                    <th>Created</th>
+                </tr>
+            </thead>
+            <tbody>
+            @foreach (var category in Model.Categories)
+            {
+                <tr>
+                    <td>@category.Id</td>
+                    <td><strong>@category.Name</strong></td>
+                    <td><code>@category.Slug</code></td>
+                    <td>@(category.ParentName ?? "Root category")</td>
+                    <td>@category.CreatedAt.ToLocalTime().ToString("yyyy-MM-dd HH:mm")</td>
+                </tr>
+            }
+            </tbody>
+        </table>
+    </div>
+}

@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - HW 14.09.2026</title>
+    <link rel="stylesheet" href="~/css/mvc.css" />
+</head>
+<body>
+<header class="site-header">
+    <a class="brand" asp-controller="Categories" asp-action="Index">HW 14.09.2026</a>
+    <nav class="main-nav">
+        <a asp-controller="Categories" asp-action="Index">Categories</a>
+        <a asp-controller="Users" asp-action="Index">Users</a>
+    </nav>
+</header>
+<main class="page-container">
+    @RenderBody()
+</main>
+</body>
+</html>

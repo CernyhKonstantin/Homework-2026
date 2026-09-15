@@ -1,0 +1,6 @@
+namespace HW_14._09._2026.Services.Interfaces;
+
+public interface IUserQueuePublisher
+{
+    Task PublishUserRegisteredAsync(int userId, string email);
+}
