@@ -1,0 +1,51 @@
+.app {
+  width: min(760px, calc(100% - 40px));
+  margin: 0 auto;
+  padding: 64px 20px;
+  text-align: center;
+}
+
+.subtitle {
+  margin-bottom: 40px;
+}
+
+.counter-card {
+  margin: 0 auto;
+  padding: 32px;
+  max-width: 360px;
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  background: var(--card-bg);
+  box-shadow: var(--shadow);
+}
+
+.counter-card h2 {
+  margin-bottom: 16px;
+}
+
+.counter-value {
+  margin: 0 0 24px;
+  font-size: 56px;
+  font-weight: 700;
+  color: var(--text-h);
+}
+
+.counter-card button {
+  border: 0;
+  border-radius: 10px;
+  padding: 12px 20px;
+  font: inherit;
+  font-weight: 600;
+  color: white;
+  background: var(--accent);
+  cursor: pointer;
+}
+
+.counter-card button:hover {
+  opacity: 0.9;
+}
+
+.counter-card button:focus-visible {
+  outline: 3px solid var(--accent-border);
+  outline-offset: 3px;
+}
