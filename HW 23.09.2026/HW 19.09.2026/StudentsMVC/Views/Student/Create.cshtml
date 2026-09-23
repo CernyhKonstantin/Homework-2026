@@ -1,0 +1,37 @@
+@model StudentsMVC.Application.DTOs.CreateStudentDto
+
+<div class="container py-4">
+    <h1>Add Student</h1>
+    <p class="text-muted">This form is validated by FluentValidation in the Application layer.</p>
+
+    <form asp-action="Create" method="post" class="mt-4" novalidate>
+        <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+
+        <div class="mb-3">
+            <label asp-for="Name" class="form-label">Name</label>
+            <input asp-for="Name" class="form-control" />
+            <span asp-validation-for="Name" class="text-danger"></span>
+        </div>
+
+        <div class="mb-3">
+            <label asp-for="Surname" class="form-label">Surname</label>
+            <input asp-for="Surname" class="form-control" />
+            <span asp-validation-for="Surname" class="text-danger"></span>
+        </div>
+
+        <div class="mb-3">
+            <label asp-for="Age" class="form-label">Age</label>
+            <input asp-for="Age" type="number" class="form-control" />
+            <span asp-validation-for="Age" class="text-danger"></span>
+        </div>
+
+        <div class="mb-3">
+            <label asp-for="GPA" class="form-label">GPA</label>
+            <input asp-for="GPA" type="number" step="0.01" class="form-control" />
+            <span asp-validation-for="GPA" class="text-danger"></span>
+        </div>
+
+        <button type="submit" class="btn btn-primary">Create student</button>
+        <a asp-action="Index" class="btn btn-secondary">Back</a>
+    </form>
+</div>

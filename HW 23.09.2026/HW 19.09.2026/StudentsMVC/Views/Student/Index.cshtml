@@ -1,0 +1,38 @@
+@model IEnumerable<Student>
+
+<div class="container py-4">
+    <div class="d-flex justify-content-between align-items-center mb-4">
+        <div>
+            <h1>Students</h1>
+            <p class="text-muted mb-0">Students loaded from the database.</p>
+        </div>
+        <a asp-action="Create" class="btn btn-primary">Add student</a>
+    </div>
+
+    @if (TempData["SuccessMessage"] is string successMessage)
+    {
+        <div class="alert alert-success">@successMessage</div>
+    }
+
+    <table class="table table-striped table-bordered">
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Surname</th>
+                <th>Age</th>
+                <th>GPA</th>
+            </tr>
+        </thead>
+        <tbody>
+        @foreach (var student in Model)
+        {
+            <tr>
+                <td>@student.Name</td>
+                <td>@student.Surname</td>
+                <td>@student.Age</td>
+                <td>@student.GPA</td>
+            </tr>
+        }
+        </tbody>
+    </table>
+</div>
