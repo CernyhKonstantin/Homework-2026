@@ -1,0 +1,16 @@
+services:
+  web:
+    image: nginx:alpine
+    container_name: hw07102026-nginx
+    ports:
+      - "8080:80"
+    restart: unless-stopped
+
+  centos-demo:
+    build:
+      context: .
+      dockerfile: Dockerfile.centos
+    image: hw-07-10-2026-centos:1.0
+    container_name: hw07102026-centos
+    command: ["bash", "-lc", "while true; do echo 'CentOS demo container is running'; sleep 60; done"]
+    restart: unless-stopped

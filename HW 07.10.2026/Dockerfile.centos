@@ -1,0 +1,6 @@
+FROM quay.io/centos/centos:stream9
+
+LABEL org.opencontainers.image.title="HW 07.10.2026 CentOS Demo"
+LABEL org.opencontainers.image.description="A simple CentOS Stream 9 container for a Docker introduction assignment"
+
+CMD ["bash", "-lc", "cat /etc/centos-release && echo 'CentOS demonstration container started'"]
