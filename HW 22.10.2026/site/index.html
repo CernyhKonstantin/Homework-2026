@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>HW Docker Apache</title>
+  <style>
+    body { margin: 0; min-height: 100vh; display: grid; place-items: center;
+      font-family: Arial, sans-serif; color: #e2e8f0; background: #020617; }
+    main { width: min(680px, calc(100% - 48px)); padding: 36px;
+      border: 1px solid #334155; border-radius: 18px; background: #0f172a; }
+    h1 { color: #38bdf8; }
+    code { color: #7dd3fc; }
+    .tag { display: inline-block; padding: 6px 10px; border-radius: 999px;
+      background: #164e63; color: #cffafe; font-size: 12px; font-weight: bold; }
+  </style>
+</head>
+<body>
+  <main>
+    <span class="tag">DOCKER · HTTPD</span>
+    <h1>Apache HTTP Server is running!</h1>
+    <p>This page is served by the official <code>httpd:latest</code> Docker image.</p>
+    <p>The local <code>site</code> folder is mounted into the container with <code>-v</code>.</p>
+    <p>The container was started with <code>APP_ENV=homework</code> using <code>-e</code>.</p>
+  </main>
+</body>
+</html>
