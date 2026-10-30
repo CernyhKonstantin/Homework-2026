@@ -1,0 +1,28 @@
+{% extends "main/layout.html" %}
+{% block title %}{{ profile.first_name }} {{ profile.last_name }} | Personal CV{% endblock %}
+{% block content %}
+<header class="hero-section" id="top"><div class="container"><div class="row align-items-center gy-5">
+<div class="col-lg-7 order-2 order-lg-1"><p class="eyebrow mb-3">PERSONAL PROFILE &amp; PORTFOLIO</p><h1 class="hero-title">{{ profile.first_name }} <span>{{ profile.last_name }}</span></h1><h2 class="hero-role">{{ profile.role }}</h2><p class="hero-intro">{{ profile.summary }}</p>
+<div class="d-flex flex-wrap gap-3 mt-4"><a class="btn btn-cv btn-lg" href="mailto:{{ profile.email }}">Get in touch <i class="bi bi-arrow-up-right ms-1"></i></a><a class="btn btn-outline-light btn-lg" href="#projects">View projects</a></div>
+<div class="hero-contact mt-4"><span><i class="bi bi-geo-alt"></i> {{ profile.city }}</span><a href="mailto:{{ profile.email }}"><i class="bi bi-envelope"></i> {{ profile.email }}</a><a href="tel:{{ profile.phone }}"><i class="bi bi-telephone"></i> {{ profile.phone }}</a></div></div>
+<div class="col-lg-5 order-1 order-lg-2 text-center"><div class="portrait-frame mx-auto"><img src="{{ profile.photo_url }}" alt="Portrait of {{ profile.first_name }} {{ profile.last_name }}" class="profile-photo"><div class="portrait-tag"><i class="bi bi-check-circle-fill me-2"></i>Open to opportunities</div></div></div>
+</div></div></header>
+<main>
+<section class="section-space" id="about"><div class="container"><div class="section-heading"><p class="eyebrow">01 / ABOUT ME</p><h2>Who I am</h2></div><div class="row g-4">
+<div class="col-lg-7"><div class="content-card h-100"><h3 class="card-heading">A little about me</h3><p>{{ profile.summary }}</p><h3 class="card-heading mt-4">Professional objective</h3><p class="mb-0">{{ profile.goal }}</p></div></div>
+<div class="col-lg-5"><div class="content-card h-100"><h3 class="card-heading">Personal qualities</h3><div class="quality-list">{% for quality in profile.qualities %}<span class="quality-pill"><i class="bi bi-check2"></i> {{ quality }}</span>{% endfor %}</div></div></div>
+</div></div></section>
+<section class="section-space section-muted" id="education"><div class="container"><div class="section-heading"><p class="eyebrow">02 / EDUCATION</p><h2>Learning journey</h2></div><div class="row g-4">
+{% for item in education %}<div class="col-md-6"><div class="content-card education-card h-100"><span class="date-label">{{ item.years }}</span><h3 class="card-heading mt-3">{{ item.institution }}</h3><p class="specialization">{{ item.specialization }}</p><p class="mb-0">{{ item.description }}</p></div></div>{% endfor %}
+</div></div></section>
+<section class="section-space" id="skills"><div class="container"><div class="section-heading"><p class="eyebrow">03 / SKILLS</p><h2>Tools I work with</h2></div><div class="row g-4">
+<div class="col-lg-4 col-md-6"><div class="content-card skill-card h-100"><div class="skill-icon"><i class="bi bi-code-slash"></i></div><h3 class="card-heading">Programming</h3><div class="tag-list">{% for skill in programming_skills %}<span>{{ skill }}</span>{% endfor %}</div></div></div>
+<div class="col-lg-4 col-md-6"><div class="content-card skill-card h-100"><div class="skill-icon"><i class="bi bi-laptop"></i></div><h3 class="card-heading">Software &amp; Tools</h3><div class="tag-list">{% for skill in software_skills %}<span>{{ skill }}</span>{% endfor %}</div></div></div>
+<div class="col-lg-4 col-md-12"><div class="content-card skill-card h-100"><div class="skill-icon"><i class="bi bi-translate"></i></div><h3 class="card-heading">Languages</h3>{% for language in languages %}<div class="language-row"><span>{{ language.name }}</span><strong>{{ language.level }}</strong></div>{% endfor %}</div></div>
+</div></div></section>
+<section class="section-space section-muted" id="projects"><div class="container"><div class="section-heading"><p class="eyebrow">04 / EXPERIENCE</p><h2>Selected projects</h2><p class="section-description">Practical work, learning projects, and technologies I have explored.</p></div><div class="row g-4">
+{% for project in projects %}<div class="col-lg-4 col-md-6"><article class="card project-card h-100"><div class="project-number">0{{ forloop.counter }}</div><div class="card-body"><h3 class="card-title">{{ project.title }}</h3><p class="card-text">{{ project.description }}</p><div class="tag-list mb-3">{% for technology in project.technologies %}<span>{{ technology }}</span>{% endfor %}</div><div class="result-box"><strong>Result</strong><p class="mb-0">{{ project.result }}</p></div></div></article></div>{% endfor %}
+</div></div></section>
+<section class="contact-section section-space" id="contact"><div class="container text-center"><p class="eyebrow">LET'S CONNECT</p><h2>Have a project in mind?</h2><p class="contact-copy">I would be happy to discuss opportunities, ideas, and collaboration.</p><a class="btn btn-cv btn-lg" href="mailto:{{ profile.email }}">Send me an email <i class="bi bi-arrow-up-right ms-1"></i></a></div></section>
+</main>
+{% endblock %}
