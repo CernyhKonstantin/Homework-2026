@@ -1,0 +1,19 @@
+{% extends "base.html" %}
+{% block content %}
+<section class="hero"><p class="eyebrow">CITY INFORMATION · BURGHAUSEN</p><h1>{{ title }}</h1><p>{{ intro }}</p></section>
+{% if page == "history" or page == "people" or page == "photos" %}
+<div class="subnav"><a href="{% url 'history' %}">History overview</a><a href="{% url 'history_people' %}">Famous people</a><a href="{% url 'history_photos' %}">Historical photos</a></div>
+{% endif %}
+<section class="grid">
+{% for heading, text, url in cards %}
+<article class="card"><h2>{{ heading }}</h2><p>{{ text }}</p>{% if url %}<a href="/{{ url }}">Open section →</a>{% endif %}</article>
+{% endfor %}
+</section>
+{% if page == "photos" %}
+<section class="gallery">
+<div class="art castle"><div class="castle-shape"></div><h2>Burghausen Castle</h2><p>Illustrative placeholder artwork</p></div>
+<div class="art river"><div class="town-shape"></div><h2>Old town and the Salzach</h2><p>Illustrative placeholder artwork</p></div>
+</section>
+{% endif %}
+{% if page == "history" %}<div class="subnav"><a href="{% url 'history_people' %}">Read about famous people →</a><a href="{% url 'history_photos' %}">View historical photos →</a></div>{% endif %}
+{% endblock %}
