@@ -1,0 +1,8 @@
+{% extends "main/base.html" %}{% block title %}Home{% endblock %}{% block content %}
+<section class="hero"><small>PYTHON BACK-END · FRAMEWORKS</small><h1>Four Django form exercises</h1><p>Login, number calculator, online shop registration and Programmer's Day.</p></section>
+<section class="grid">
+<a class="tile" href="{% url 'login' %}"><small>01</small><h2>User Login</h2><p>Check demo credentials and access levels.</p></a>
+<a class="tile" href="{% url 'calculator' %}"><small>02</small><h2>Number Calculator</h2><p>Find the minimum, maximum or arithmetic mean.</p></a>
+<a class="tile" href="{% url 'register' %}"><small>03</small><h2>Shop Registration</h2><p>Submit personal details and newsletter preference.</p></a>
+<a class="tile" href="{% url 'programmers_day' %}"><small>04</small><h2>Programmer's Day</h2><p>Calculate the 256th day of a selected year.</p></a>
+</section>{% endblock %}

@@ -1,0 +1,7 @@
+{% extends "main/base.html" %}{% block title %}Login{% endblock %}{% block content %}
+<section class="panel narrow"><small>TASK 01</small><h1>User Login</h1><p>Enter one of the demonstration accounts.</p>
+<form method="post">{% csrf_token %}<label>Username</label><input name="username" autocomplete="username" required>
+<label>Password</label><input name="password" type="password" autocomplete="current-password" required><button>Sign in</button></form>
+{% if result %}<div class="success"><h2>Welcome, {{ result.username }}!</h2><p>Access level: <b>{{ result.access }}</b></p></div>{% endif %}
+{% if error %}<div class="error">{{ error }}</div>{% endif %}
+<div class="hint"><b>Demo credentials</b><br>Administrator: admin / admin123<br>Regular user: user / user123</div></section>{% endblock %}

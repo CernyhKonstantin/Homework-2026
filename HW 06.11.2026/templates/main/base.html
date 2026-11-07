@@ -1,0 +1,6 @@
+{% load static %}<!DOCTYPE html>
+<html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>{% block title %}Django Forms{% endblock %} | HW 06.11.2026</title><link rel="stylesheet" href="{% static 'main/style.css' %}"></head>
+<body><header><a class="brand" href="{% url 'home' %}">Py <b>Django Forms</b></a><nav>
+<a href="{% url 'login' %}">Login</a><a href="{% url 'calculator' %}">Calculator</a><a href="{% url 'register' %}">Registration</a><a href="{% url 'programmers_day' %}">Programmer's Day</a>
+</nav></header><main>{% block content %}{% endblock %}</main><footer>Python Back-End · Django Forms Homework · 06.11.2026</footer></body></html>

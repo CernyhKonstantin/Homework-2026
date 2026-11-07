@@ -1,0 +1,9 @@
+{% extends "main/base.html" %}{% block title %}Calculator{% endblock %}{% block content %}
+<section class="panel"><small>TASK 02</small><h1>Three-Number Calculator</h1><p>Enter three numbers and choose an operation.</p>
+<form method="post">{% csrf_token %}<div class="fields three">
+{% for n in "123" %}<div><label>Number {{ n }}</label><input name="number{{ n }}" type="number" step="any" required></div>{% endfor %}</div>
+<fieldset><legend>Select an operation</legend><label class="radio"><input type="radio" name="operation" value="minimum" required> Minimum</label>
+<label class="radio"><input type="radio" name="operation" value="maximum"> Maximum</label>
+<label class="radio"><input type="radio" name="operation" value="average"> Arithmetic mean</label></fieldset><button>Calculate</button></form>
+{% if result != None %}<div class="success"><h2>Calculation result</h2><p class="result">{{ result|floatformat:4 }}</p></div>{% endif %}
+{% if error %}<div class="error">{{ error }}</div>{% endif %}</section>{% endblock %}
