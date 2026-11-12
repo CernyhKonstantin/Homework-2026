@@ -1,0 +1,15 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>${APP_TITLE}</title>
+<style>
+body{font-family:Arial,sans-serif;background:#f3f6fb;color:#172033;margin:0;padding:48px 20px}
+main{max-width:760px;margin:auto;padding:36px;background:white;border-radius:16px;box-shadow:0 12px 32px #14233c1a}
+h1{color:#262b78}.tag{display:inline-block;padding:7px 12px;border-radius:20px;background:#e3f7e9;color:#176b35;font-weight:bold}
+dt{margin-top:16px;font-weight:bold}dd{margin:5px 0 0}
+</style></head><body><main>
+<span class="tag">Apache is running</span><h1>${APP_TITLE}</h1><p>${APP_MESSAGE}</p>
+<h2>Container environment values</h2><dl>
+<dt>Application environment</dt><dd>${APP_ENV}</dd>
+<dt>Application version</dt><dd>${APP_VERSION}</dd>
+<dt>Server owner</dt><dd>${SERVER_OWNER}</dd>
+</dl></main></body></html>

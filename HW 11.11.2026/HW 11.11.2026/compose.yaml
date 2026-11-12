@@ -1,0 +1,25 @@
+services:
+  centos-apache:
+    build:
+      context: .
+      dockerfile: Dockerfile.centos
+    image: hw-centos-apache-env:latest
+    container_name: hw-centos-apache-env
+    ports:
+      - "8081:80"
+    environment:
+      APP_TITLE: "CentOS Apache Environment Demo"
+      APP_MESSAGE: "This page was generated from container environment variables."
+      APP_ENV: "homework"
+      APP_VERSION: "1.0.0"
+      SERVER_OWNER: "CS-Digital"
+    restart: unless-stopped
+  php-info:
+    build:
+      context: .
+      dockerfile: Dockerfile.php
+    image: hw-php-info:latest
+    container_name: hw-php-info
+    ports:
+      - "8082:80"
+    restart: unless-stopped

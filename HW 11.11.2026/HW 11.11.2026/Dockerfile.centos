@@ -1,0 +1,9 @@
+FROM quay.io/centos/centos:stream9
+LABEL description="Apache on CentOS with environment-variable web page"
+RUN dnf -y install httpd gettext && dnf clean all && rm -rf /var/cache/dnf
+WORKDIR /var/www/html
+COPY centos-apache/site/index.html.template /var/www/html/index.html.template
+COPY centos-apache/entrypoint.sh /usr/local/bin/entrypoint.sh
+RUN chmod +x /usr/local/bin/entrypoint.sh
+EXPOSE 80
+ENTRYPOINT ["/usr/local/bin/entrypoint.sh"]
