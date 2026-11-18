@@ -1,0 +1,9 @@
+{% extends "base.html" %}
+{% block title %}{{ book.title }} | LibraryHub{% endblock %}
+{% block content %}
+<a class="back" href="{% url 'book-list' %}">← Back to books</a>
+<section class="detail-card"><p class="eyebrow">BOOK DETAILS</p><h1>{{ book.title }}</h1><p class="lead">by {{ book.author }}</p>
+<dl class="details"><dt>Publication year</dt><dd>{{ book.publication_year }}</dd><dt>Genre</dt><dd>{{ book.genre }}</dd><dt>Publisher</dt><dd>{{ book.publisher }}</dd>
+<dt>Availability</dt><dd>{% if book.is_available %}<span class="status available">Available</span>{% else %}<span class="status borrowed">Borrowed</span>{% endif %}</dd>
+{% if active_loan %}<dt>Currently borrowed by</dt><dd>{{ active_loan.reader }}</dd>{% endif %}</dl></section>
+{% endblock %}

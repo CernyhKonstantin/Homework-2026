@@ -1,0 +1,13 @@
+{% extends "base.html" %}
+{% block title %}{{ reader }} | LibraryHub{% endblock %}
+{% block content %}
+<a class="back" href="{% url 'reader-list' %}">← Back to readers</a>
+<section class="detail-card"><p class="eyebrow">READER PROFILE</p><h1>{{ reader.first_name }} {{ reader.last_name }}</h1>
+<dl class="details"><dt>Email</dt><dd>{{ reader.email }}</dd><dt>Phone</dt><dd>{{ reader.phone }}</dd><dt>Registration date</dt><dd>{{ reader.registration_date }}</dd></dl></section>
+<h2 class="section-title">Borrowing history</h2>
+<div class="table-wrap"><table><thead><tr><th>Book</th><th>Borrowed on</th><th>Returned on</th><th>Status</th></tr></thead><tbody>
+{% for loan in reader.loans.all %}<tr><td>{{ loan.book.title }}</td><td>{{ loan.borrowed_on }}</td><td>{{ loan.returned_on|default:"—" }}</td>
+<td>{% if loan.returned_on %}<span class="status available">Returned</span>{% else %}<span class="status borrowed">On loan</span>{% endif %}</td></tr>
+{% empty %}<tr><td colspan="4" class="empty">This reader has no loans.</td></tr>{% endfor %}
+</tbody></table></div>
+{% endblock %}

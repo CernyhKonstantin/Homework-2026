@@ -1,0 +1,10 @@
+{% extends "base.html" %}
+{% block title %}Loans | LibraryHub{% endblock %}
+{% block content %}
+<div class="page-heading"><div><p class="eyebrow">CIRCULATION</p><h1>Book loans</h1><p class="muted">Current and previous loans.</p></div></div>
+<div class="table-wrap"><table><thead><tr><th>Book</th><th>Reader</th><th>Borrowed on</th><th>Returned on</th><th>Status</th></tr></thead><tbody>
+{% for loan in loans %}<tr><td>{{ loan.book.title }}</td><td><a class="book-title" href="{% url 'reader-detail' loan.reader.pk %}">{{ loan.reader }}</a></td><td>{{ loan.borrowed_on }}</td><td>{{ loan.returned_on|default:"—" }}</td>
+<td>{% if loan.returned_on %}<span class="status available">Returned</span>{% else %}<span class="status borrowed">On loan</span>{% endif %}</td></tr>
+{% empty %}<tr><td colspan="5" class="empty">No loans recorded.</td></tr>{% endfor %}
+</tbody></table></div>
+{% endblock %}

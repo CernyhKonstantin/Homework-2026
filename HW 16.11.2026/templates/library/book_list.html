@@ -1,0 +1,12 @@
+{% extends "base.html" %}
+{% block title %}Books | LibraryHub{% endblock %}
+{% block content %}
+<div class="page-heading"><div><p class="eyebrow">LIBRARY CATALOGUE</p><h1>Books</h1><p class="muted">Browse the collection and check current availability.</p></div>
+<div class="filters"><a class="{% if mode == 'all' %}selected{% endif %}" href="{% url 'book-list' %}">All books</a>
+<a class="{% if mode == 'available' %}selected{% endif %}" href="{% url 'book-list' %}?availability=available">Available books</a></div></div>
+<div class="table-wrap"><table><thead><tr><th>Title</th><th>Author</th><th>Year</th><th>Genre</th><th>Publisher</th><th>Status</th></tr></thead><tbody>
+{% for book in books %}<tr><td><a class="book-title" href="{% url 'book-detail' book.pk %}">{{ book.title }}</a></td><td>{{ book.author }}</td><td>{{ book.publication_year }}</td><td>{{ book.genre }}</td><td>{{ book.publisher }}</td>
+<td>{% if book.is_available %}<span class="status available">Available</span>{% else %}<span class="status borrowed">Borrowed</span>{% endif %}</td></tr>
+{% empty %}<tr><td colspan="6" class="empty">No books found.</td></tr>{% endfor %}
+</tbody></table></div><p class="muted small">Showing {{ books|length }} book(s).</p>
+{% endblock %}

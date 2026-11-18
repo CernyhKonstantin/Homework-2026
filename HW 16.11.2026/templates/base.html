@@ -1,0 +1,16 @@
+{% load static %}
+<!doctype html>
+<html lang="en">
+<head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>{% block title %}LibraryHub{% endblock %}</title>
+<link rel="stylesheet" href="{% static 'library/style.css' %}"></head>
+<body>
+<header class="topbar"><a class="brand" href="{% url 'book-list' %}">Library<span>Hub</span></a>
+{% if user.is_authenticated %}
+<nav><a href="{% url 'book-list' %}">Books</a>
+{% if user.is_staff or user.is_superuser %}<a href="{% url 'reader-list' %}">Readers</a><a href="{% url 'loan-list' %}">Loans</a><a href="/admin/">Admin</a>{% endif %}</nav>
+<div class="account"><span>{{ user.username }}</span><form method="post" action="{% url 'logout' %}">{% csrf_token %}<button class="link-button" type="submit">Log out</button></form></div>
+{% endif %}</header>
+<main class="container">{% if messages %}{% for message in messages %}<div class="notice">{{ message }}</div>{% endfor %}{% endif %}{% block content %}{% endblock %}</main>
+<footer>Library Management System · Python Back-End Coursework</footer>
+</body></html>
