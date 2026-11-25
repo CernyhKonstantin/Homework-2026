@@ -1,0 +1,1 @@
+{% extends "account/base.html" %}{% block content %}<section class="card"><h1>{{ t.rules }}</h1><p>{{ t.rules_text }}</p><form method="post">{% csrf_token %}<button type="submit">{{ t.accept }}</button></form></section>{% endblock %}
