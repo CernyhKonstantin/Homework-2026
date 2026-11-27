@@ -1,0 +1,258 @@
+{
+	"info": {
+		"_postman_id": "714a1ebb-7d10-48d0-b6c5-6703abd5d3c0",
+		"name": "DRF_Example",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "30561330",
+		"_collection_link": "https://restless-crescent-619047.postman.co/workspace/New-workspace~14f6933c-9008-452d-9e6f-62ad57881c15/collection/30561330-714a1ebb-7d10-48d0-b6c5-6703abd5d3c0?action=share&source=collection_link&creator=30561330"
+	},
+	"item": [
+		{
+			"name": "ExampleView",
+			"item": [
+				{
+					"name": "user",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{host}}api/sample/",
+							"host": [
+								"{{host}}api"
+							],
+							"path": [
+								"sample",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "echo-1",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "name",
+									"value": "Joe",
+									"description": "name-input",
+									"type": "text"
+								},
+								{
+									"key": "surname",
+									"value": "Due",
+									"description": "surname-input",
+									"type": "text"
+								},
+								{
+									"key": "name",
+									"value": "Jack",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{host}}/api/sample/",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"api",
+								"sample",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "echo-2",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"jack\",\r\n    \"surname\": \"nicolas\",\r\n    \"email\": \"jacknicolas@django.com\",\r\n    \"role\": \"admin\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{host}}/api/sample/",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"api",
+								"sample",
+								""
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Products",
+			"item": [
+				{
+					"name": "productllist",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{host}}/api/products/?order=asc",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"api",
+								"products",
+								""
+							],
+							"query": [
+								{
+									"key": "order",
+									"value": "asc"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "new product",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"{{$randomProductName}}\",\r\n    \"price\": \"{{$randomPrice}}\",\r\n    // \"price\": -1,\r\n    \"description\": \"{{$randomProduct}}\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{host}}/api/products/",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"api",
+								"products",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "product",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{host}}/api/product/3355efed-8763-456d-bb14-b536f400eabf",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"api",
+								"product",
+								"3355efed-8763-456d-bb14-b536f400eabf"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "product update",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"NEW_NAME\",\r\n    \"price\": 201.6\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{host}}/api/product/3355efed-8763-456d-bb14-b536f400eabf/",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"api",
+								"product",
+								"3355efed-8763-456d-bb14-b536f400eabf",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "New Request",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{host}}/api/products",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"api",
+								"products"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"requests": {},
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"requests": {},
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "host",
+			"value": "",
+			"type": "default"
+		}
+	]
+}
